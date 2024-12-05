@@ -1,4 +1,5 @@
 import Human from "@/components/ui/human";
+import Wheel from "@/components/ui/wheel";
 
 export default function MainApp() {
     return <>
@@ -9,5 +10,7 @@ export default function MainApp() {
         
       </div>
       <Human />
+      <Wheel img1="" img2="" img3="" img_bodypart=""/>
+      
     </>;
   }
