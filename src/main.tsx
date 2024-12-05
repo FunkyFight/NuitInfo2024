@@ -4,7 +4,13 @@ import { BrowserRouter, Route, Routes } from 'react-router';
 import App from './Home.tsx';
 import MainApp from './mainapp/index.tsx';
 import Captcha from './captcha/index.tsx';
-//import './index.css';
+
+
+
+import "./assets/fonts/UniHeavy.otf";
+import './index.css';
+
+
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

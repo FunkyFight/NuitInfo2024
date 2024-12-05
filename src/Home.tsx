@@ -1,16 +1,10 @@
-import './Home.css'
-
 function App() {
   
   return (
-    <>
-      <h1>Votre corps est comme l'océan</h1>
-    </>
+    <div id="container">
+      <h1 className="text-3xl">Votre corps est comme l'océan</h1>
+    </div>
   )
-}
-
-function test() {
-
 }
 
 export default App
