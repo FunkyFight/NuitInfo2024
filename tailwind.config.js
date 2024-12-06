@@ -55,6 +55,9 @@ export default {
   		},
 		fontFamily: {
 			roboto: ['Roboto', "sans-serif"]
+		},
+		backgroundImage: {
+			'waterbg': 'url("src\\assets\\Background_normal_.webp")'
 		}
   	}
   },
