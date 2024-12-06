@@ -1,14 +1,10 @@
 export default data = {
     heart:{
         title:"Cœur",
-        img1: "",
-        img2: [
-            "",
-            "",
-            ""
-        ],
-        img3: "",
-        img_bodypart: ["img/Coeur_1.webp", "img/Coeur_2.webp", "img/Coeur_3.webp"],
+        img1: ["", "", ""],
+        img2: ["", "", ""],
+        img3: ["", "", ""],
+        img_bodypart: ["img/bodyparts/Coeur_1.webp", "img/bodyparts/Coeur_2.webp", "img/bodyparts/Coeur_3.webp"],
         description: `Le cœur agit comme la pompe centrale du système circulatoire, maintenant un flux continu de sang qui transporte l’oxygène, les nutriments et les déchets à travers tout le corps.
 Courants océaniques similaires : Les courants océaniques, tels que le Gulf Stream, jouent un rôle similaire en transportant chaleur, énergie et nutriments à travers le globe, influençant les écosystèmes marins et terrestres.
 Analogies spécifiques :
@@ -19,14 +15,10 @@ Impact global : Si le cœur s'arrête, le corps entier en souffre. De même, une
     },
     lungs:{
         title:"Poumons",
-        img1: "",
-        img2: [
-            "",
-            "",
-            ""
-        ],
-        img3: "",
-        img_bodypart: ["Poumon_1.webp", "Poumon_2.webp", "Poumon_3.webp"],
+        img1: ["", "", ""],
+        img2: ["", "", ""],
+        img3: ["", "", ""],
+        img_bodypart: ["img/bodyparts/Poumon_1.webp", "img/bodyparts/Poumon_2.webp", "img/bodyparts/Poumon_3.webp"],
         description:`Les poumons humains sont essentiels pour échanger l'oxygène et le dioxyde de carbone avec l'environnement, tout comme les océans produisent et absorbent ces gaz essentiels.
 
 Phytoplancton et photosynthèse : Environ 50 à 80 % de l'oxygène mondial provient du phytoplancton océanique. Ces micro-organismes, tout comme les alvéoles dans nos poumons, fonctionnent à une échelle microscopique mais ont un impact global.
@@ -37,14 +29,10 @@ Rôle vital commun : Les deux sont des régulateurs chimiques pour leur système
     },
     system:{
         title:"Système lymphatique",
-        img1: "",
-        img2: [
-            "",
-            "",
-            ""
-        ],
-        img3: "",
-        img_bodypart: ["Sys_lymph_1.webp", "Sys_lymph_2.webp", "Sys_lymph_3.webp"],
+        img1: ["", "", ""],
+        img2: ["", "", ""],
+        img3: ["", "", ""],
+        img_bodypart: ["img/bodyparts/Sys_lymph_1.webp", "img/bodyparts/Sys_lymph_2.webp", "img/bodyparts/Sys_lymph_3.webp"],
         description:`Le système lymphatique agit comme un réseau de drainage et de filtration qui protège le corps contre les infections et élimine les déchets, rappelant les fonctions d’autorégulation des océans.
 
 Purification :
@@ -56,14 +44,10 @@ Résilience partagée : Bien qu’efficaces, les deux systèmes peuvent être su
     },
     kidneys:{
         title:"Reins",
-        img1: "",
-        img2: [
-            "",
-            "",
-            ""
-        ],
-        img3: "",
-        img_bodypart: ["Reins_1.webp", "Reins_2.webp", "Reins_3.webp"],
+        img1: ["", "", ""],
+        img2: ["", "", ""],
+        img3: ["", "", ""],
+        img_bodypart: ["img/bodyparts/Reins_1.webp", "img/bodyparts/Reins_2.webp", "img/bodyparts/Reins_3.webp"],
         description:`Les reins maintiennent l'équilibre hydrique et électrolytique dans le corps, tout comme les océans régulent la salinité et les niveaux d'eau sur Terre.
 
 Homéostasie commune :
@@ -78,10 +62,10 @@ Les organes humains et les océans partagent des rôles fondamentaux dans leurs 
     },
     brain:{
         title:"Cerveau",
-        img1: "",
+        img1: ["", "", ""],
         img2: ["", "", ""],
         img3: ["", "", ""],
-        img_bodypart: ["Cerveau_1.webp", "Cerveau_2.webp", "Cerveau_3.webp"],
+        img_bodypart: ["img/bodyparts/Cerveau_1.webp", "img/bodyparts/Cerveau_2.webp", "img/bodyparts/Cerveau_3.webp"],
         description:`
 Le cerveau humain est un réseau incroyablement complexe, interconnecté, où chaque cellule contribue à la fonction globale, tout comme les océans sont constitués d'écosystèmes interdépendants.
 

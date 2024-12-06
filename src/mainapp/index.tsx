@@ -14,6 +14,8 @@ import {
 } from "@/components/ui/drawer"
 import { Button } from "@/components/ui/button"
 
+import data from "../assets/data"
+
 export default function MainApp() {
     const [body_part, set_body_part] = useState("heart");
     const firby = "https://cdn.idealo.com/folder/Product/204404/0/204404007/s4_produktbild_gross/hasbro-furby-furblets-luv-lee.jpg";
@@ -21,7 +23,7 @@ export default function MainApp() {
       <div className="w-full h-dvh">
         <div className="w-full grid grid-cols-2">
           {
-             body_part == "heart" ? <Wheel img1={firby} img2={firby} img3={firby} img_bodypart={firby}/> : 
+             body_part == "heart" ? <Wheel img1={data.heart.img1} img2={data.heart.img2} img3={data.heart.img3} img_bodypart={data.heart.img_bodypart}/> : 
              body_part == "default" ? <Wheel img1={firby} img2={firby} img3={firby} img_bodypart={firby}/> : 
              
              <></>
