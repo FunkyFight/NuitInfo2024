@@ -7,7 +7,7 @@ export default function Wheel({ img1, img2, img3, img_bodypart }: { img1: string
                 <span className="w-[50%] h-full absolute bottom-0 right-0">
                     <img src={img3} alt="" className="object-cover w-full h-full bg-blue-500 select-none drag-none"/>
                 </span>
-                <span className="w-full h-full absolute bottom-0 left-0" style={{
+                <span className="w-full h-full absolute bottom-0 left-0 hidden" style={{
                     clipPath: 'polygon(10% 0, 90% 0, 50% 100%)'
                     }}>
                     <img src={img2} alt="" className="object-cover w-full h-full bg-green-500 select-none drag-none" />
