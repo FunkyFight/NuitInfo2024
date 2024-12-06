@@ -57,7 +57,7 @@ export default {
 			roboto: ['Roboto', "sans-serif"]
 		},
 		backgroundImage: {
-			'water-bg': 'url("src\\assets\\Background_normal_.webp")'
+			'waterbg': 'url("src\\assets\\Background_normal_.webp")'
 		}
   	}
   },

@@ -13,13 +13,11 @@ import './index.css';
 
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' Component={App} />
-        <Route path='/main' Component={MainApp} />
-        <Route path='/captcha' Component={Captcha} />
-      </Routes>
-    </BrowserRouter>
-  </StrictMode>
+  <BrowserRouter>
+    <Routes>
+      <Route path='/' Component={App} />
+      <Route path='/main' Component={MainApp} />
+      <Route path='/captcha' Component={Captcha} />
+    </Routes>
+  </BrowserRouter>
 );
