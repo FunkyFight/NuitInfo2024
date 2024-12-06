@@ -60,10 +60,12 @@ export default function MainApp() {
 
     return <>
       <div className="w-full h-dvh">
-        <div className="w-full grid grid-cols-2 h-[95%]">
-          {
+        <div className="w-full grid lg:grid-cols-2 h-[95%]">
+          <div className="lg:block hidden flex-col justify-center bg-white">
+            {
              organs?.wheel
-          }
+            }
+          </div>
           <div>
           <Human body_part_setter={set_body_part} />
           </div>
