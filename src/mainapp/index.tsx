@@ -20,24 +20,27 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 
 const firby = "https://cdn.idealo.com/folder/Product/204404/0/204404007/s4_produktbild_gross/hasbro-furby-furblets-luv-lee.jpg";
 
-const organsFunctions = [
-  {
-    "name": "heart", 
-    "titleSlider": <HeartTitleSlider/>, 
-    "slider": <HeartSlider/>, 
-    "description": <HeartDescription/>,
-    "wheel": <Wheel img1={firby} img2={firby} img3={firby} img_bodypart={firby}/>
-  }
-]
+
+
+
 
 
 
 
 
 export default function MainApp() {
-    const [body_part, set_body_part] = useState("heart");
     const [slider_value, set_slider_value] = useState<number | undefined>(0);
-    
+    const [body_part, set_body_part] = useState("heart");
+
+    const organsFunctions = [
+      {
+        "name": "heart", 
+        "titleSlider": <HeartTitleSlider SVS={set_slider_value}/>,
+        "description": <HeartDescription/>,
+        "wheel": <Wheel img1={firby} img2={firby} img3={firby} img_bodypart={firby}/>
+      }
+    ]
+
     let organs = organsFunctions.find(val => val.name == body_part)
     console.log(slider_value)
 
@@ -74,16 +77,16 @@ export default function MainApp() {
     </>;
   }
 
-function HeartTitleSlider() {
+function HeartTitleSlider({ SVS }: { SVS: CallableFunction }) {
   return (<DialogTitle className="align-middle">
     <p className="text-4xl text-center py-3">Coeur</p>
-    <HeartSlider></HeartSlider>
+    <HeartSlider SliderValueSetter={SVS}></HeartSlider>
   </DialogTitle>)
 }
 
-function HeartSlider() {
+function HeartSlider({ SliderValueSetter }: { SliderValueSetter: CallableFunction }) {
   return (<div className="w-[60%] justify-self-center z-[50] py-1 my-2 bg-gradient-to-tr">
-  <Slider onValueChange={(val) => set_slider_value(val[0])} defaultValue={[0]} max={2} step={1} className="z-[60]"></Slider>
+  <Slider onValueChange={(val) => SliderValueSetter(val[0])} defaultValue={[0]} max={2} step={1} className="z-[60]"></Slider>
   </div>)
 }
 
