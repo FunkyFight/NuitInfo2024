@@ -2,7 +2,6 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import App from './Home.tsx';
 import MainApp from './mainapp/index.tsx';
-import Captcha from './captcha/index.tsx';
 
 
 
@@ -16,7 +15,6 @@ createRoot(document.getElementById('root')!).render(
     <Routes>
       <Route path='/' Component={App} />
       <Route path='/main' Component={MainApp} />
-      <Route path='/captcha' Component={Captcha} />
     </Routes>
   </BrowserRouter>
 );

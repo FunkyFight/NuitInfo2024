@@ -2,30 +2,30 @@ import { useEffect } from "react"
 
 const fishes = [
   {
-    src: "src/assets/clown_fish.webp",
+    src: "/img/water/clown_fish.webp",
     className: "wateritem h-32 absolute z-0 left-[95%] overflow-hidden duration-[3500ms] transition-all ease-out"
   },
   {
-    src: "src/assets/poisson_blue_yell.webp",
+    src: "/img/water/poisson_blue_yell.webp",
     className: "wateritem h-32 absolute z-0 left-[95%] overflow-hidden duration-[3500ms] transition-all ease-out"
   },
   {
-    src: "src/assets/poisson_green_blue.webp",
+    src: "/img/water/poisson_green_blue.webp",
     className: "wateritem h-32 absolute z-0 left-[95%] overflow-hidden duration-[3500ms] transition-all ease-out"
   },
   {
-    src: "src/assets/poisson_purple_orange.webp",
+    src: "/img/water/poisson_purple_orange.webp",
     className: "wateritem h-32 absolute z-0 left-[95%] overflow-hidden duration-[3500ms] transition-all ease-out"
   },
 ];
 
 const dechets = [
   {
-    src: "src/assets/Poubelle.webp",
+    src: "/img/water/Poubelle.webp",
     className: "wateritem h-32 absolute z-0 left-[95%] overflow-hidden duration-[3500ms] transition-all ease-out"
   },
   {
-    src: "src/assets/Can.webp",
+    src: "/img/water/Can.webp",
     className: "wateritem h-32 absolute z-0 left-[95%] overflow-hidden duration-[3500ms] transition-all ease-out"
   }
 ]
