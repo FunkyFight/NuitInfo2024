@@ -33,8 +33,11 @@ export default function MainApp() {
           <Human body_part_setter={set_body_part}/>
           </div>
         </div>
-        <Drawer >
+      </div>
+      <Drawer >
         <DrawerTrigger>Open</DrawerTrigger>
+        <DrawerContent className="bg-cyan-50 max-h-[99%] rounded-t-[500px] overflow-hidden p-0 border-0">
+          <div className="justify-items-center p-0">
         <DrawerContent className="bg-cyan-50 max-h-[99%] rounded-t-[500px] overflow-hidden p-0 border-0">
           <div className="justify-items-center p-0">
                 {
@@ -55,6 +58,30 @@ export default function MainApp() {
       </Drawer>
       </div>
     </>;
+  }
+
+function HeartTitleSlider() {
+  return (<DialogTitle className="align-middle">
+    <p className="text-4xl text-center py-3">Coeur</p>
+    <HeartSlider></HeartSlider>
+  </DialogTitle>)
+}
+
+function HeartSlider() {
+  return (<div className="w-[60%] justify-self-center z-[50] py-1 my-2 bg-gradient-to-tr">
+  <Slider defaultValue={[0]} max={2} step={1} className="z-[60]"></Slider>
+  </div>)
+}
+
+function HeartDescription() {
+  return (
+  <DialogDescription className="w-[90%] justify-self-center z-[50] py-1 my-5 bg-gradient-to-tr">
+    <p className="text-justify">
+    Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. v Les yeux sont comme les poissons qui vivent dans l'océan.Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. v Les yeux sont comme les poissons qui vivent dans l'océan.Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. v Les yeux sont comme les poissons qui vivent dans l'océan.Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. v Les yeux sont comme les poissons qui vivent dans l'océan.
+    </p>
+  </DialogDescription>
+  )
+}
   }
 
 function HeartTitleSlider() {
