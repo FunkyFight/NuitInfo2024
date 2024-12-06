@@ -4,17 +4,11 @@ import Wheel from "@/components/ui/wheel";
 import { useState, useEffect } from "react";
 import {
   Drawer,
-  DrawerClose,
   DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
+  DrawerTrigger
 } from "@/components/ui/drawer";
 
 import { Slider } from "@/components/ui/slider";
-import { DialogDescription, DialogTitle } from "@radix-ui/react-dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 import { data } from "@/assets/data";
@@ -127,7 +121,6 @@ function OSlider({ SliderValueSetter }: { SliderValueSetter: CallableFunction })
 }
 
 function Description({ BodyPart, SliderValue }: { BodyPart: string, SliderValue: number}) {
-  let part: string = BodyPart;
   let organDesc = data[BodyPart as keyof typeof data].description[SliderValue]
   return (
   <div className="w-[90%] justify-self-center z-[50] py-1 my-5 bg-gradient-to-tr">
