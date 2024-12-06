@@ -1,7 +1,7 @@
 import Human from "@/components/ui/human";
 import Wheel from "@/components/ui/wheel";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Drawer,
   DrawerClose,
@@ -23,6 +23,17 @@ export default function MainApp() {
     const [slider_value, set_slider_value] = useState<number>(0);
     const [body_part, set_body_part] = useState("heart");
 
+    const [islg, set_islg] = useState(
+      window.matchMedia("(min-width: 1024px)").matches
+    )
+
+    useEffect(() => {
+      window
+      .matchMedia("(min-width: 1024px)")
+      .addEventListener('change', e => set_islg( e.matches ));
+    }, []);
+  
+
     const organsFunctions = [
       {
         "name": "heart", 
@@ -43,12 +54,17 @@ export default function MainApp() {
             }
           </div>
           <div>
-          <Human body_part_setter={set_body_part} />
+          <Human body_part_setter={(value: any) => {
+            set_body_part(value);
+            if (!islg) {
+              document.getElementById("drawer-trigger")?.click();
+            }
+          }} />
           </div>
         </div>
 
         <Drawer>
-        <DrawerTrigger>Open</DrawerTrigger>
+        <DrawerTrigger id= "drawer-trigger" className="hidden">Open</DrawerTrigger>
         <DrawerContent className="bg-cyan-50 max-h-[99%] rounded-t-[500px] overflow-hidden p-0 border-0">
           <div className="justify-items-center p-0">
                 {
