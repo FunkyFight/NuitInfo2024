@@ -20,11 +20,11 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { data } from "@/assets/data";
 
 export default function MainApp() {
-    const [body_part, set_body_part] = useState("heart");
+    const [body_part, set_body_part] = useState ("heart");
     const firby = "https://cdn.idealo.com/folder/Product/204404/0/204404007/s4_produktbild_gross/hasbro-furby-furblets-luv-lee.jpg";
     return <>
       <div className="w-full h-dvh">
-        <div className="w-full grid grid-cols-2">
+        <div className="w-full grid grid-cols-2 h-full">
           {
              body_part == "heart" ? <Wheel img1={data.heart.img1[0]} img2={data.heart.img2[0]} img3={data.heart.img3[0]} img_bodypart={data.heart.img_bodypart[0]}/> : 
              body_part == "default" ? <Wheel img1={firby} img2={firby} img3={firby} img_bodypart={firby}/> : 
@@ -32,7 +32,7 @@ export default function MainApp() {
              <></>
           }
           <div>
-          <Human body_part_setter={set_body_part}/>
+          <Human body_part_setter={set_body_part} />
           </div>
         </div>
 
