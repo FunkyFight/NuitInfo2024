@@ -30,7 +30,7 @@ export const data = {
         `Si la pollution océanique continue, les gyres océaniques et les courants secondaires pourraient devenir totalement dysfonctionnels. L'accumulation de déchets plastiques, les toxines chimiques et l'excès de nutriments (eutrophisation) empêcheraient les processus naturels de purification et d’équilibre. Cela pourrait provoquer la mort des zones océaniques entières (zones mortes hypoxiques), à l’image d’un système lymphatique effondré, où les toxines s’accumulent dans les tissus corporels, conduisant à des inflammations chroniques, des maladies auto-immunes, ou même la mort.`]
 
     },
-    kidneys:{
+    kidney:{
         title:"Reins",
         img1: ["img/ocean/REINS_plage.png", "img/ocean/REINS_plage_casser.png", "img/ocean/REINS_plage_casser__.png"],
         img2: ["img/ocean/COEUR_tortue_3.png", "img/ocean/COEUR_tortue_3.png", "img/ocean/COEUR_tortue_3.png"],
