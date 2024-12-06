@@ -11,22 +11,13 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/components/ui/drawer"
-import { Button } from "@/components/ui/button"
+} from "@/components/ui/drawer";
 
-import { Slider } from "@/components/ui/slider"
+import { Slider } from "@/components/ui/slider";
 import { DialogDescription, DialogTitle } from "@radix-ui/react-dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
-const firby = "https://cdn.idealo.com/folder/Product/204404/0/204404007/s4_produktbild_gross/hasbro-furby-furblets-luv-lee.jpg";
-
-
-
-
-
-
-
-
+import { data } from "@/assets/data";
 
 export default function MainApp() {
     const [slider_value, set_slider_value] = useState<number | undefined>(0);
@@ -46,12 +37,12 @@ export default function MainApp() {
 
     return <>
       <div className="w-full h-dvh">
-        <div className="w-full grid grid-cols-2">
+        <div className="w-full grid grid-cols-2 h-full">
           {
              organs?.wheel
           }
           <div>
-          <Human body_part_setter={set_body_part}/>
+          <Human body_part_setter={set_body_part} />
           </div>
         </div>
 

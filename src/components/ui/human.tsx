@@ -113,13 +113,20 @@ export default function Human({ body_part_setter }: { body_part_setter: Callable
 
                 .cls-28 {
                     fill: #fefefe;
-                }`
+                }
+                .cls-11:hover {fill:#530000; transition: all 0.1s ease-in-out}
+                .cls-24:hover {fill:#bb6300; transition: all 0.1s ease-in-out}
+                .cls-3:hover {fill:#ab0000; transition: all 0.1s ease-in-out}
+                .cls-16:hover {fill:#c60066; transition: all 0.1s ease-in-out}
+                .cls-20:hover {fill:#a3a3a3; transition: all 0.1s ease-in-out}
+                `
 
-    return <div className="flex flex-col justify-items-start items-center">
+    return <div className="flex flex-col justify-items-start items-center h-full">
             <h1 className="text-3xl font-bold underline">
                 Choisissez une partie du corps humain pour observer les parallèles pouvant être fait avec l'ocean.
             </h1>
-            <svg id="qTBo8zGAc_Image" className="h-[50%]" data-name="qTBo8zGAc Image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 311.4 651.6">
+            <div className="h-full">
+            <svg id="qTBo8zGAc_Image" className="h-[100%] z-50" data-name="qTBo8zGAc Image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 311.4 651.6">
             <defs>
                 <style>
                      {svgcss}
@@ -165,6 +172,8 @@ export default function Human({ body_part_setter }: { body_part_setter: Callable
             <path className="cls-24"  onClick={() => body_part_setter("kidney")} d="M107.76,284.14c.34-7.39,2.96-12.88,8.26-16.99,2.06-1.59,4.42-2.36,7.06-2.04,1.77.21,2.49,1.17,2.3,2.95-.29,2.76-1.64,4.93-3.61,6.79-.91.86-1.72,1.84-2.66,2.67-3.67,3.28-4.06,4.77-2.31,9.42.48,1.29.76,2.58-.35,3.68-1.17,1.16-2.59,1.71-4.25,1.24-1.83-.52-2.99-1.82-3.54-3.53-.51-1.57-.7-3.25-.89-4.19Z"/>
             <path className="cls-3" onClick={() => body_part_setter("heart")} d="M177.48,172.58c-2.21-1.75-3.89-3.25-5.73-4.49-3.87-2.59-8.21-4.56-11.05-8.46-1.01-1.39-1.98-2.88-2.61-4.47-1.96-4.98,2.7-11.53,7.9-11.26,4.05.21,6.96,2.72,7.79,6.7.07.35.06.78.27,1.03.4.49.92.88,1.39,1.32.35-.49.93-.94,1.01-1.47.59-3.64,4.62-7.05,8.68-7.23,3.5-.15,7.14,2.73,7.7,6.48.23,1.51-.16,3.21-.65,4.7-.48,1.45-1.24,2.93-2.26,4.05-4.15,4.53-8.45,8.93-12.43,13.11Z"/>
             <path className="cls-16"  onClick={() => body_part_setter("brain")} d="M170.52,25.67c-.06.53-.08,1.44-.26,2.31-.86,4.02-2.23,4.78-6.33,4.37-7.85-.78-15.69-1.96-23.62-1.07-.83.09-1.68.07-2.51.02-2.61-.16-3.11-.99-3.39-3.56-.63-5.75,2.09-10.22,5.33-14.4,2.28-2.94,5.81-4.11,9.36-4.32,3.12-.19,6.35.14,9.42.78,4.82,1,11.24,8.49,11.88,13.35.09.71.08,1.43.13,2.52Z"/>
+            
             </svg>
+        </div>
     </div>;    
 }
