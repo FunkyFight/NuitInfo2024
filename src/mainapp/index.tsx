@@ -26,9 +26,33 @@ export default function MainApp() {
     const organsFunctions = [
       {
         "name": "heart", 
-        "titleSlider": <TitleSlider SVS={set_slider_value}/>,
+        "titleSlider": <TitleSlider SVS={set_slider_value} BodyPartDisplayName={data.heart.title}/>,
         "description": <Description BodyPart={body_part} SliderValue={slider_value}/>,
         "wheel": <Wheel img1={data.heart.img1[slider_value]} img2={data.heart.img2[slider_value]} img3={data.heart.img3[slider_value]} img_bodypart={data.heart.img_bodypart[slider_value]}/>
+      },
+      {
+        "name": "lungs", 
+        "titleSlider": <TitleSlider SVS={set_slider_value} BodyPartDisplayName={data.lungs.title}/>,
+        "description": <Description BodyPart={body_part} SliderValue={slider_value}/>,
+        "wheel": <Wheel img1={data.lungs.img1[slider_value]} img2={data.lungs.img2[slider_value]} img3={data.lungs.img3[slider_value]} img_bodypart={data.lungs.img_bodypart[slider_value]}/>
+      },
+      {
+        "name": "brain", 
+        "titleSlider": <TitleSlider SVS={set_slider_value} BodyPartDisplayName={data.brain.title}/>,
+        "description": <Description BodyPart={body_part} SliderValue={slider_value}/>,
+        "wheel": <Wheel img1={data.brain.img1[slider_value]} img2={data.brain.img2[slider_value]} img3={data.brain.img3[slider_value]} img_bodypart={data.brain.img_bodypart[slider_value]}/>
+      },
+      {
+        "name": "kidney", 
+        "titleSlider": <TitleSlider SVS={set_slider_value} BodyPartDisplayName={data.kidneys.title}/>,
+        "description": <Description BodyPart={body_part} SliderValue={slider_value}/>,
+        "wheel": <Wheel img1={data.kidneys.img1[slider_value]} img2={data.kidneys.img2[slider_value]} img3={data.kidneys.img3[slider_value]} img_bodypart={data.kidneys.img_bodypart[slider_value]}/>
+      },
+      {
+        "name": "system", 
+        "titleSlider": <TitleSlider SVS={set_slider_value} BodyPartDisplayName={data.system.title}/>,
+        "description": <Description BodyPart={body_part} SliderValue={slider_value}/>,
+        "wheel": <Wheel img1={data.system.img1[slider_value]} img2={data.system.img2[slider_value]} img3={data.system.img3[slider_value]} img_bodypart={data.system.img_bodypart[slider_value]}/>
       }
     ]
 
@@ -67,9 +91,9 @@ export default function MainApp() {
     </>;
   }
 
-function TitleSlider({ SVS }: { SVS: CallableFunction }) {
+function TitleSlider({ SVS, BodyPartDisplayName }: { SVS: CallableFunction, BodyPartDisplayName: string }) {
   return (<DialogTitle className="align-middle">
-    <p className="text-4xl text-center py-3">Coeur</p>
+    <p className="text-4xl text-center py-3">{ BodyPartDisplayName }</p>
     <OSlider SliderValueSetter={SVS}></OSlider>
   </DialogTitle>)
 }
