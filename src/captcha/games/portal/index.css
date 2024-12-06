@@ -1,0 +1,30 @@
+.game.portal {
+  background-position: center;
+  background-size: cover;
+
+  position: relative;
+}
+
+#start {
+  position: absolute;
+  left: 0;
+  width: 4vw;
+
+  z-index: 2;
+}
+
+#cube {
+  position: absolute;
+  width: 2vw;
+  left: 0;
+  z-index: 50s;
+}
+
+#blue,
+#orange {
+  position: absolute;
+  top: -5000px;
+  left: -5000px;
+
+  width: 15px;
+}
