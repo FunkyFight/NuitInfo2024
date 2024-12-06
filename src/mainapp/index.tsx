@@ -11,14 +11,13 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/components/ui/drawer"
-import { Button } from "@/components/ui/button"
+} from "@/components/ui/drawer";
 
-import { Slider } from "@/components/ui/slider"
+import { Slider } from "@/components/ui/slider";
 import { DialogDescription, DialogTitle } from "@radix-ui/react-dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
-import data from "../assets/data"
+import { data } from "@/assets/data";
 
 export default function MainApp() {
     const [body_part, set_body_part] = useState("heart");
@@ -27,7 +26,7 @@ export default function MainApp() {
       <div className="w-full h-dvh">
         <div className="w-full grid grid-cols-2">
           {
-             body_part == "heart" ? <Wheel img1={data.heart.img1} img2={data.heart.img2} img3={data.heart.img3} img_bodypart={data.heart.img_bodypart}/> : 
+             body_part == "heart" ? <Wheel img1={data.heart.img1[0]} img2={data.heart.img2[0]} img3={data.heart.img3[0]} img_bodypart={data.heart.img_bodypart[0]}/> : 
              body_part == "default" ? <Wheel img1={firby} img2={firby} img3={firby} img_bodypart={firby}/> : 
              
              <></>
