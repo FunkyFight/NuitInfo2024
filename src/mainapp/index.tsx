@@ -13,14 +13,15 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer"
 import { Slider } from "@/components/ui/slider"
-import { DialogDescription, DialogTitle } from "@radix-ui/react-dialog";
-
+import { DialogDescription, DialogTitle} from "@radix-ui/react-dialog";
+import { ScrollArea } from "@/components/ui/scroll-area";
 export default function MainApp() {
-    const [body_part, set_body_part] = useState("heart");
+    const [body_part, set_body_part] = useState ("heart");
     const firby = "https://cdn.idealo.com/folder/Product/204404/0/204404007/s4_produktbild_gross/hasbro-furby-furblets-luv-lee.jpg";
     return <>
       <div className="w-full h-dvh">
-        <div className="w-full grid grid-cols-2 h-dvh">
+      
+        <div className="w-full grid grid-cols-2 h-full">
           {
              body_part == "heart" ? <Wheel img1={firby} img2={firby} img3={firby} img_bodypart={firby}/> : 
              body_part == "default" ? <Wheel img1={firby} img2={firby} img3={firby} img_bodypart={firby}/> : 
@@ -28,12 +29,13 @@ export default function MainApp() {
              <></>
           }
           <div>
-          <Human body_part_setter={set_body_part}/>
+          <Human body_part_setter={set_body_part} />
           </div>
         </div>
-        <Drawer>
+      </div>
+      <Drawer >
         <DrawerTrigger>Open</DrawerTrigger>
-        <DrawerContent className="bg-cyan-50 h-[99%] rounded-t-[500px] overflow-hidden p-0 border-0">
+        <DrawerContent className="bg-cyan-50 max-h-[99%] rounded-t-[500px] overflow-hidden p-0 border-0">
           <div className="justify-items-center p-0">
                 {
                 body_part == "heart" ? <Wheel img1={firby} img2={firby} img3={firby} img_bodypart={firby}/> : 
@@ -42,14 +44,15 @@ export default function MainApp() {
                 }
             
           </div>
-          <div>
-              <HeartTitleSlider></HeartTitleSlider>
-              <HeartDescription></HeartDescription>
+          <div className="h-[60%]">
           
+              <HeartTitleSlider></HeartTitleSlider>
+          <ScrollArea className="h-[80%] w-[100%]">
+              <HeartDescription></HeartDescription>
+          </ScrollArea>
           </div>
         </DrawerContent>
       </Drawer>
-      </div>
     </>;
   }
 
@@ -67,9 +70,11 @@ function HeartSlider() {
 }
 
 function HeartDescription() {
-  return (<DialogDescription className="w-[90%] justify-self-center z-[50] py-1 my-5 bg-gradient-to-tr">
+  return (
+  <DialogDescription className="w-[90%] justify-self-center z-[50] py-1 my-5 bg-gradient-to-tr">
     <p className="text-justify">
-      Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. v Les yeux sont comme les poissons qui vivent dans l'océan.
+    Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. v Les yeux sont comme les poissons qui vivent dans l'océan.Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. v Les yeux sont comme les poissons qui vivent dans l'océan.Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. v Les yeux sont comme les poissons qui vivent dans l'océan.Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. v Les yeux sont comme les poissons qui vivent dans l'océan.
     </p>
-  </DialogDescription>)
+  </DialogDescription>
+  )
 }
