@@ -12,6 +12,8 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer"
+import { Button } from "@/components/ui/button"
+
 import { Slider } from "@/components/ui/slider"
 import { DialogDescription, DialogTitle } from "@radix-ui/react-dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -40,18 +42,17 @@ export default function MainApp() {
     console.log(slider_value)
 
     return <>
-      <div className="w-full">
-      
+      <div className="w-full h-dvh">
         <div className="w-full grid grid-cols-2">
           {
              organs?.wheel
           }
           <div>
-          <Human />
+          <Human body_part_setter={set_body_part}/>
           </div>
         </div>
-      </div>
-      <Drawer >
+
+        <Drawer>
         <DrawerTrigger>Open</DrawerTrigger>
         <DrawerContent className="bg-cyan-50 max-h-[99%] rounded-t-[500px] overflow-hidden p-0 border-0">
           <div className="justify-items-center p-0">
@@ -69,6 +70,7 @@ export default function MainApp() {
           </div>
         </DrawerContent>
       </Drawer>
+      </div>
     </>;
   }
 
