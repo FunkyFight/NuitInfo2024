@@ -20,24 +20,23 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { data } from "@/assets/data";
 
 export default function MainApp() {
-    const [slider_value, set_slider_value] = useState<number | undefined>(0);
+    const [slider_value, set_slider_value] = useState<number>(0);
     const [body_part, set_body_part] = useState("heart");
 
     const organsFunctions = [
       {
         "name": "heart", 
-        "titleSlider": <HeartTitleSlider SVS={set_slider_value}/>,
-        "description": <HeartDescription/>,
-        "wheel": <Wheel img1={firby} img2={firby} img3={firby} img_bodypart={firby}/>
+        "titleSlider": <TitleSlider SVS={set_slider_value}/>,
+        "description": <Description BodyPart={body_part} SliderValue={slider_value}/>,
+        "wheel": <Wheel img1={data.heart.img1[slider_value]} img2={data.heart.img2[slider_value]} img3={data.heart.img3[slider_value]} img_bodypart={data.heart.img_bodypart[slider_value]}/>
       }
     ]
 
     let organs = organsFunctions.find(val => val.name == body_part)
-    console.log(slider_value)
 
     return <>
       <div className="w-full h-dvh">
-        <div className="w-full grid grid-cols-2 h-full">
+        <div className="w-full grid grid-cols-2 h-[95%]">
           {
              organs?.wheel
           }
@@ -68,24 +67,26 @@ export default function MainApp() {
     </>;
   }
 
-function HeartTitleSlider({ SVS }: { SVS: CallableFunction }) {
+function TitleSlider({ SVS }: { SVS: CallableFunction }) {
   return (<DialogTitle className="align-middle">
     <p className="text-4xl text-center py-3">Coeur</p>
-    <HeartSlider SliderValueSetter={SVS}></HeartSlider>
+    <OSlider SliderValueSetter={SVS}></OSlider>
   </DialogTitle>)
 }
 
-function HeartSlider({ SliderValueSetter }: { SliderValueSetter: CallableFunction }) {
+function OSlider({ SliderValueSetter }: { SliderValueSetter: CallableFunction }) {
   return (<div className="w-[60%] justify-self-center z-[50] py-1 my-2 bg-gradient-to-tr">
   <Slider onValueChange={(val) => SliderValueSetter(val[0])} defaultValue={[0]} max={2} step={1} className="z-[60]"></Slider>
   </div>)
 }
 
-function HeartDescription() {
+function Description({ BodyPart, SliderValue }: { BodyPart: string, SliderValue: number}) {
+  let part: string = BodyPart;
+  let organDesc = data[BodyPart as keyof typeof data].description[SliderValue]
   return (
   <DialogDescription className="w-[90%] justify-self-center z-[50] py-1 my-5 bg-gradient-to-tr">
     <p className="text-justify">
-    Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. v Les yeux sont comme les poissons qui vivent dans l'océan.Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. v Les yeux sont comme les poissons qui vivent dans l'océan.Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. v Les yeux sont comme les poissons qui vivent dans l'océan.Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. Les yeux sont comme les poissons qui vivent dans l'océan. v Les yeux sont comme les poissons qui vivent dans l'océan.
+      { organDesc }
     </p>
   </DialogDescription>
   )
