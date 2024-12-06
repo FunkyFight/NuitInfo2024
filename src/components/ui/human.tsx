@@ -122,9 +122,9 @@ export default function Human({ body_part_setter }: { body_part_setter: Callable
                 `
 
     return <div className="flex flex-col justify-items-start items-center h-full">
-            <h1 className="text-3xl font-bold underline">
+            <h2 className="text-2xl font-bold underline text-center m-5">
                 Choisissez une partie du corps humain pour observer les parallèles pouvant être fait avec l'ocean.
-            </h1>
+            </h2>
             <div className="h-full">
             <svg id="qTBo8zGAc_Image" className="h-[100%] z-50" data-name="qTBo8zGAc Image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 311.4 651.6">
             <defs>
