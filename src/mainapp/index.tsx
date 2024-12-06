@@ -23,6 +23,8 @@ export default function MainApp() {
     const [slider_value, set_slider_value] = useState<number>(0);
     const [body_part, set_body_part] = useState("heart");
 
+    document.getElementsByTagName("Draw")
+
     const organsFunctions = [
       {
         "name": "heart", 
