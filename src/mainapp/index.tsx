@@ -33,14 +33,17 @@ export default function MainApp() {
           </div>
         </div>
       </div>
-      
-      
-      
       <Drawer>
         <DrawerTrigger>Open</DrawerTrigger>
-        <DrawerContent className="bg-cyan-50 h-[90%]">
+        <DrawerContent className="bg-cyan-50 h-[90%] rounded-t-[500px] overflow-hidden p-0 border-0">
           <div >
-            <DrawerHeader className="justify-items-center">
+            <DrawerHeader className="justify-items-center p-0">
+                {
+                body_part == "heart" ? <Wheel img1={firby} img2={firby} img3={firby} img_bodypart={firby}/> : 
+                body_part == "default" ? <Wheel img1={firby} img2={firby} img3={firby} img_bodypart={firby}/> : 
+
+                <></>
+                }
                 <DrawerTitle >PARTIE DU CORPS</DrawerTitle>
             </DrawerHeader>
                 <DrawerFooter>
