@@ -48,7 +48,7 @@ export default function Captcha() {
             }
 
             if (state === State.FINISHED) {
-              alert("Mais nan !? Vous n'etes pas un robot, c'est super!");
+              window.location.replace('/');
             }
           }}
           style={{
