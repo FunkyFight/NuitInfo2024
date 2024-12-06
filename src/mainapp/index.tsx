@@ -55,9 +55,9 @@ export default function MainApp() {
       },
       {
         "name": "kidney", 
-        "titleSlider": <TitleSlider SVS={set_slider_value} BodyPartDisplayName={data.kidneys.title}/>,
+        "titleSlider": <TitleSlider SVS={set_slider_value} BodyPartDisplayName={data.kidney.title}/>,
         "description": <Description BodyPart={body_part} SliderValue={slider_value}/>,
-        "wheel": <Wheel img1={data.kidneys.img1[slider_value]} img2={data.kidneys.img2[slider_value]} img3={data.kidneys.img3[slider_value]} img_bodypart={data.kidneys.img_bodypart[slider_value]}/>
+        "wheel": <Wheel img1={data.kidney.img1[slider_value]} img2={data.kidney.img2[slider_value]} img3={data.kidney.img3[slider_value]} img_bodypart={data.kidney.img_bodypart[slider_value]}/>
       },
       {
         "name": "system", 
@@ -73,9 +73,13 @@ export default function MainApp() {
       <div className="w-full h-dvh">
         <div className="w-full grid lg:grid-cols-2 h-[95%]">
           <div className="lg:block hidden flex-col justify-center bg-white">
-            {
-             organs?.wheel
-            }
+          {
+                organs?.wheel
+              }
+              {
+                organs?.titleSlider
+              }
+              {organs?.description}
           </div>
           <div>
           <Human body_part_setter={(value: any) => {
@@ -110,10 +114,10 @@ export default function MainApp() {
   }
 
 function TitleSlider({ SVS, BodyPartDisplayName }: { SVS: CallableFunction, BodyPartDisplayName: string }) {
-  return (<DialogTitle className="align-middle">
+  return (<div className="align-middle">
     <p className="text-4xl text-center py-3">{ BodyPartDisplayName }</p>
     <OSlider SliderValueSetter={SVS}></OSlider>
-  </DialogTitle>)
+  </div>)
 }
 
 function OSlider({ SliderValueSetter }: { SliderValueSetter: CallableFunction }) {
@@ -126,10 +130,10 @@ function Description({ BodyPart, SliderValue }: { BodyPart: string, SliderValue:
   let part: string = BodyPart;
   let organDesc = data[BodyPart as keyof typeof data].description[SliderValue]
   return (
-  <DialogDescription className="w-[90%] justify-self-center z-[50] py-1 my-5 bg-gradient-to-tr">
+  <div className="w-[90%] justify-self-center z-[50] py-1 my-5 bg-gradient-to-tr">
     <p className="text-justify">
       { organDesc }
     </p>
-  </DialogDescription>
+  </div>
   )
 }
