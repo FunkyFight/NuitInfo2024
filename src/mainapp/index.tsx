@@ -26,7 +26,7 @@ export default function MainApp() {
              <></>
           }
           <div>
-          <Human />
+          <Human body_part_setter={set_body_part}/>
           </div>
         </div>
       </div>

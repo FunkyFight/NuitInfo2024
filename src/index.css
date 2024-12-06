@@ -10,6 +10,12 @@ html {
   font-weight: 400;
 }
 
+body {
+  background-image: url('/background_site.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .drag-none {
   -webkit-user-drag: none;
 }
