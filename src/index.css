@@ -12,8 +12,11 @@ html {
 
 body {
   background-image: url('/background_site.png');
-  background-size: cover;
+  background-size: cover !important;
   background-repeat: no-repeat;
+  height: 100vh!important;
+  
+  overflow: hidden;
 }
 
 .drag-none {

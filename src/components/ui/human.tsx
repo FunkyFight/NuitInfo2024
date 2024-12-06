@@ -115,11 +115,11 @@ export default function Human({ body_part_setter }: { body_part_setter: Callable
                     fill: #fefefe;
                 }`
 
-    return <div className="h-dvh">
-        <h1 className="text-3xl font-bold underline">
-            Choisissez une partie du corps humain pour observer les parallèles pouvant être fait avec l'ocean.
-          </h1>
-            <svg id="qTBo8zGAc_Image" data-name="qTBo8zGAc Image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 311.4 651.6">
+    return <div className="flex flex-col justify-items-start items-center">
+            <h1 className="text-3xl font-bold underline">
+                Choisissez une partie du corps humain pour observer les parallèles pouvant être fait avec l'ocean.
+            </h1>
+            <svg id="qTBo8zGAc_Image" className="h-[50%]" data-name="qTBo8zGAc Image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 311.4 651.6">
             <defs>
                 <style>
                      {svgcss}
